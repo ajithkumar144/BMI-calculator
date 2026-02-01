@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --color: rgb(34, 156, 156);
+    --color2: rgb(61, 55, 55);
+    background-color: rgb(14, 8, 34);
+}
+
+.container {
+    width: 800px;
+    height: 350px;
+    display: flex;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.bmi_img {
+    width: 200px;
+    padding: 20px;
+}
+
+.bmi_img>img:first-child {
+    height: 225px;
+    width: 300px;
+    opacity: 0.7;
+}
+
+.bmi_img>img:last-child {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: 70px;
+    left: 100px;
+    border-radius: 50%;
+    opacity: 0.7;
+
+}
+
+.bmi_data {
+    width: 450px;
+    position: relative;
+    left: 105px;
+
+}
+
+h3 {
+    color: var(--color);
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: var(--color2);
+    padding-bottom: 5px;
+    font-size: 14px;
+
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 5px;
+    font-size: 15px;
+    border: 1px var(--color) solid;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    outline: none;
+
+}
+
+button {
+    border: none;
+    padding: 10px 20px 10px 20px;
+    color: aliceblue;
+    background-color: var(--color);
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 10px;
+    position: absolute;
+    right: 80px;
+    bottom: 105px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(27, 124, 124);
+}
+
+.clear_btn {
+    right: 0px;
+    background-color: rgb(230, 83, 83);
+    transition: background-color 0.2s;
+
+}
+
+.clear_btn:hover {
+    background-color: rgb(221, 38, 38);
+}
+
+.result {
+    padding: 10px;
+    border: 1px var(--color) solid;
+}
+
+.bmi_data>p {
+    margin-top: 30px;
+    color: var(--color);
+}
+
+.result>p:first-child {
+    margin-bottom: 10px;
+    color: var(--color);
+    font-weight: bold;
+
+}
+
+.result>p:last-child {
+    color: var(--color);
+    font-weight: bold;
+}
+
+span {
+    color: var(--color);
+    font-weight: normal;
+}
+
+.error {
+    color: red;
+}
+
+
+@media (max-width: 800px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        overflow-y: auto;
+
+        margin: 0;
+    }
+
+    .bmi_img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: unset;
+        padding: 10px 0;
+        top: unset;
+        bottom:50px ;
+        
+    }
+
+    .bmi_img>img:first-child {
+        padding-top:20px ;
+        width: 250px;
+        height: auto;
+        position: relative;
+        left: 30px;
+        top: 20px;
+    }
+
+    .bmi_img>img:last-child {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        left: -135px;
+        top: 90px;
+        bottom: unset;
+    }
+
+    .bmi_data {
+        position: relative;
+        bottom: 20px;
+        width: 90%;
+        max-width: 400px;
+        left: unset;
+        top: unset;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    h3 {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 1.4rem;
+    }
+
+    input {
+        width: 100%;
+        padding: 7px;
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    button {
+        position: static;
+        width: 100%;
+        margin: 10px 0 0 0;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .clear_btn {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background-color: rgb(230, 83, 83);
+        right: unset;
+    }
+
+    .bmi_data>p,.result {
+        text-align: center;
+        position: relative;
+        bottom: 35px;
+    }
+
+    .result {
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+    }
+}
